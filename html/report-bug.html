@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Bug - Palorant</title>
+    <link rel="stylesheet" href="/css/report-bug/style.css">
+    <link rel="icon" href="/assets/icon.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>PALORANT</h1>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="agents.html">AGENTS</a></li>
+                    <li><a href="maps.html">MAPS</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="report-bug.html" class="active">REPORT BUG</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner report-banner">
+        <div class="container">
+            <h1>REPORT A BUG</h1>
+            <p>Help us improve your gaming experience by reporting any issues</p>
+        </div>
+    </section>
+
+    <!-- Bug Report Form Section -->
+    <section class="bug-report-section">
+        <div class="container">
+            <div class="report-content">
+                <div class="report-info">
+                    <h2>HOW TO REPORT A BUG</h2>
+                    <div class="report-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-info">
+                                <h3>Describe the Issue</h3>
+                                <p>Provide details about what happened and how to reproduce the bug.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-info">
+                                <h3>Include System Info</h3>
+                                <p>Your hardware, OS, and game settings help us identify the problem.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-info">
+                                <h3>Submit Screenshots</h3>
+                                <p>Visual evidence helps our team identify and fix issues faster.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-note">
+                        <h3>Note:</h3>
+                        <p>Our team reviews all bug reports and prioritizes fixes based on severity and impact. Thank
+                            you for helping us improve Palorant!</p>
+                    </div>
+                </div>
+
+                <div class="report-form">
+                    <h2>BUG REPORT FORM</h2>
+                    <form id="bugReportForm">
+                        <div class="form-group">
+                            <label for="username">Username <span class="required">*</span></label>
+                            <input type="text" id="username" name="username" placeholder="Your in-game username">
+                            <span class="error-message" id="username-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Your email address">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="server">Server <span class="required">*</span></label>
+                            <select id="server" name="server">
+                                <option value="">Select Server</option>
+                                <option value="NA">North America</option>
+                                <option value="EU">Europe</option>
+                                <option value="AP">Asia</option>
+                            </select>
+                            <span class="error-message" id="server-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bugCategory">Bug Category <span class="required">*</span></label>
+                            <select id="bugCategory" name="bugCategory">
+                                <option value="">Select Category</option>
+                                <option value="gameplay">Gameplay</option>
+                                <option value="visual">Visual/Graphics</option>
+                                <option value="audio">Audio</option>
+                                <option value="performance">Performance</option>
+                                <option value="agent">Agent Abilities</option>
+                                <option value="ui">User Interface</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="bugCategory-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bugDescription">Bug Description <span class="required">*</span></label>
+                            <textarea id="bugDescription" name="bugDescription" rows="5"
+                                placeholder="Please describe the bug in detail. Include steps to reproduce it."></textarea>
+                            <span class="error-message" id="bugDescription-error"></span>
+                        </div>
+
+                        <div class="form-group file-upload">
+                            <label for="screenshots">Screenshots (Optional)</label>
+                            <input type="file" id="screenshots" name="screenshots" accept="image/*" multiple>
+                            <div class="file-upload-button">
+                                <i class="fas fa-cloud-upload-alt"></i> Choose Files
+                            </div>
+                            <span class="file-name">No file chosen</span>
+                        </div>
+
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="contactPermission" name="contactPermission">
+                            <label for="contactPermission">I give permission for Giot Games to contact me regarding this
+                                bug report.</label>
+                            <span class="error-message" id="contactPermission-error"></span>
+                        </div>
+
+                        <button type="submit" class="btn submit-btn">SUBMIT REPORT</button>
+                    </form>
+                    <div id="form-success" class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Thank you for your report! Our team will review it shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>When will my bug be fixed?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bug fixes are prioritized based on severity and impact. Critical bugs affecting gameplay may
+                            be addressed in hotfixes, while less severe issues are typically included in regular patch
+                            updates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Will I get a response about my bug report?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Due to high volume, we cannot respond to every report individually. However, if we need more
+                            information about your bug, our team will contact you using the email provided.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I report suspicious players here?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, this form is specifically for reporting technical issues with the game. To report players
+                            for cheating or toxic behavior, please use the in-game reporting tool.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-images">
+                    <img src="/assets/giot-logo.png" alt="logo-palorant">
+                    <div class="footer-links">
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i><img src="../assets/FB.png" alt="fb"></a>
+                            <a href="#"><i class="fab fa-twitter"></i><img src="../assets/X.png"fb"></a>
+                            <a href="#"><i class="fab fa-instagram"></i><img src="../assets/IG.png" alt="fb"></a>
+                            <a href="#"><i class="fab fa-youtube"></i><img src="../assets/YT.png" alt="fb"></a>
+                            <a href="#"><i class="fab fa-discord"></i><img src="../assets/DC.png" alt="fb"></a>  
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    <p>© 2020-2025 Giot Games, Inc. GIOT GAMES, PALORANT and any associated logos are trademarks, service marks, and/or registered trademarks of Giot Games, Inc.</p>
+                </div>
+                <div class="age-rating">
+                    <img src="/assets/sertification.png" alt="PEGI 16">
+                    <span>16+</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/Report-bug/scrip.js""></script>
+</body>
+</html>

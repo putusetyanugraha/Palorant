@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'BankGothic';
+  src: url('/assets/bank\ gothic/#0f0f13') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Valorant';
+  src: url('/assets/Valorant\ Font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-lt';
+  src: url('/assets/poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #0f0f13;
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Container Global */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  align-content: center;
+}
+
+/* Header */
+header {
+  background-color: #1a1a1d;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0; 
+  z-index: 999;
+}
+
+.logo h1 {
+  font-family: 'Valorant', sans-serif;
+  color: #f94545;
+  font-size: 3rem;
+}
+
+nav {
+  font-family: 'BankGothic', sans-serif;
+  font-size: larger;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #f94545;
+  border-bottom: 2px solid #f94545;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease; 
+}
+
+
+/* Hero */
+.hero {
+  font-family: 'BankGothic', sans-serif;
+  font-size: larger;
+  background: url('../assets/hero-bg.jpg') center/cover no-repeat;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero h1 {
+  font-family: 'BankGothic', sans-serif;
+  font-size: x-large;
+  font-size: 3rem;
+  color: #f94545;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-family: 'Poppins', sans-serif;
+  font-size: medium;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #f94545;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: larger;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff6767;
+}
+
+.centered-btn {
+  display: block;
+  text-align: center;
+  margin: 2rem auto 0;
+}
+
+/* Featured Agent */
+.featured-agent {
+  background-color: #1e1e24;
+  padding: 2rem 0;
+}
+
+.featured-agent h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
+  padding: 1;
+}
+.featured-agent h3{
+  font-family: 'Poppins', sans-serif;
+  font-size: x-large;
+}
+
+.featured-agent p{
+  font-family: 'Poppins-lt', sans-serif;
+  padding: 2;
+}
+
+.featured-agent a{
+  font-family: 'Poppins', sans-serif;
+  padding: 3;
+}
+
+.agent-spotlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agent-info {
+  flex: 1;
+}
+
+.agent-role {
+  color: #f94545;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.agent-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* About */
+.about-game{
+  padding: 10px;
+}
+
+.about-game h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
+  padding: 1rem 0;
+}
+
+.about-game p{
+  font-family: 'Poppins-lt', sans-serif;
+  font-size: larger;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-info {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* News */
+.news-preview {
+  font-family: 'Poppins', sans-serif;
+  /* font-size: medium; */
+  background-color: #1e1e24;
+  padding: 2rem 0;
+}
+
+.news-preview h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
+}
+
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.news-card {
+  background-color: #2c2c34;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.news-card img {
+  width: 100%;
+}
+
+.news-content {
+  padding: 1rem;
+}
+
+.read-more {
+  color: #f94545;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  font-family: 'Roboto', sans-serif;
+  background-color: #111;
+  padding: 2rem 0;
+  color: #aaa;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  gap: 2rem;
+}
+
+.footer-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.footer-copyright p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.social-links a {
+  color: #aaa;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #f94545;
+}
+
+.age-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.age-rating img {
+  height: 100px;
+}
+
+.age-rating span{
+  font-size: 20px;
+}
+
+/* Burger */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Burger Menu Styles */
+.burger {
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* responsive */
+@media screen and (max-width: 992px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+    max-width: 300px;
+    background-color: #0f1923;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 0;
+    transition: right 0.5s ease;
+    z-index: 98;
+  }
+
+  .nav-links.nav-active {
+    right: 0;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links li {
+    opacity: 0;
+    margin: 15px 0;
+  }
+
+  .nav-links.nav-active li {
+    opacity: 1;
+    animation: navLinkFade 0.5s ease forwards;
+  }
+
+  .nav-links li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .nav-links li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .nav-links li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .nav-links li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .nav-links li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 97;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+body.menu-open::after {
+  opacity: 1;
+  visibility: visible;
+}
